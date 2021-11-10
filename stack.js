@@ -1,23 +1,45 @@
 let stack = [];
+let maxLength = 5;
 
-function pushStack(myArry){
-    if ( myArry.length === 5){
-        return alert ('Stack Is full');   
+function isFull(arryLength, fullMaxlength){
+    if (arryLength === fullMaxlength){
+        return true, alert ('Stack Is full');
     }
-    return myArry.push(i = myArry.length + 1);
+}
+
+function isEmpty(arryLength){
+    if ( arryLength === 0){
+        return true, alert ('Stack Is Empty');
+    }
+}
+
+function pushStack(myArry, myMaxLength,value){
+    return !isFull(myArry.length,myMaxLength) ? myArry.push(value) : undefined ;
 }
 
 function peekStack(myArry){
-    if ( myArry.length === 0){
-        return alert ('Stack Is Empty');   
-    } 
-    return top = myArry.slice(-1)[0]
+    return !isEmpty(myArry.length) ? myArry.slice(-1) : undefined;
 }
 
 function popStack(myArry){
-    if ( myArry.length === 0){
-        return alert ('Stack Is Empty');   
-    }    
-    return myArry.pop() 
+    return !isEmpty(myArry.length) ? myArry.pop() : undefined;
 };
+
+pushStack(stack,maxLength,1);
+pushStack(stack,maxLength,1);
+pushStack(stack,maxLength,1);
+pushStack(stack,maxLength,1);
+pushStack(stack,maxLength,1);
+
+console.log(peekStack(stack));
+
+console.log(stack);
+
+popStack(stack);
+popStack(stack);
+popStack(stack);
+popStack(stack);
+popStack(stack);
+
+console.log(stack);
 
