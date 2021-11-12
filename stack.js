@@ -1,15 +1,17 @@
 let stack = [];
-let maxLength = 5;
+const maxLength = 5;
 
 function isFull(arryLength, fullMaxlength){
     if (arryLength === fullMaxlength){
-        return true, alert ('Stack Is full');
+        alert ('Stack Is full');
+        return true;
     }
 }
 
 function isEmpty(arryLength){
     if ( arryLength === 0){
-        return true, alert ('Stack Is Empty');
+        alert ('Stack Is Empty');
+        return true;
     }
 }
 
@@ -31,6 +33,7 @@ pushStack(stack,maxLength,1);
 pushStack(stack,maxLength,1);
 pushStack(stack,maxLength,1);
 
+
 console.log(peekStack(stack));
 
 console.log(stack);
@@ -42,4 +45,3 @@ popStack(stack);
 popStack(stack);
 
 console.log(stack);
-
