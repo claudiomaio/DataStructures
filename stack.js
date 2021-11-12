@@ -1,30 +1,36 @@
 let stack = [];
 const maxLength = 5;
 
+function handleIsFull (){
+    return alert ('Stack Is full');
+} 
+
+function handleIsEmpty (){
+    return alert ('Stack Is Empty');
+} 
+
 function isFull(arryLength, fullMaxlength){
     if (arryLength === fullMaxlength){
-        alert ('Stack Is full');
         return true;
     }
 }
 
 function isEmpty(arryLength){
     if ( arryLength === 0){
-        alert ('Stack Is Empty');
         return true;
     }
 }
 
 function pushStack(myArry, myMaxLength,value){
-    return !isFull(myArry.length,myMaxLength) ? myArry.push(value) : undefined ;
+    return !isFull(myArry.length,myMaxLength) ? myArry.push(value) : handleIsFull();
 }
 
 function peekStack(myArry){
-    return !isEmpty(myArry.length) ? myArry.slice(-1) : undefined;
+    return !isEmpty(myArry.length) ? myArry.slice(-1) : handleIsEmpty();
 }
 
 function popStack(myArry){
-    return !isEmpty(myArry.length) ? myArry.pop() : undefined;
+    return !isEmpty(myArry.length) ? myArry.pop() : handleIsEmpty();
 };
 
 pushStack(stack,maxLength,1);
@@ -45,3 +51,4 @@ popStack(stack);
 popStack(stack);
 
 console.log(stack);
+
