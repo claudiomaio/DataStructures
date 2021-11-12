@@ -1,31 +1,37 @@
 let queue = [];
 const maxLength = 5;
 
+function handleIsFull (){
+    return alert ('Queue Is full');;
+} 
+
+function handleIsEmpty (){
+    return alert ('Queue Is Empty');
+} 
+
 
 function isFull(queueLength, fullMaxlength){
     if (queueLength === fullMaxlength){
-        alert ('Queue Is full');
         return true;
     }
 }
 
 function isEmpty(queueLength){
     if ( queueLength === 0){
-        alert ('Queue Is Empty');
         return true; 
     }
 }
 
 function enQueue(myQueue, myMaxLength,value){
-   return !isFull(myQueue.length,myMaxLength) ? myQueue.push(value) : undefined ;
+   return !isFull(myQueue.length,myMaxLength) ? myQueue.push(value) : handleIsFull();
 }
 
 function peekQueue(myQueue){
-    return !isEmpty(myQueue.length) ? myQueue[0] : undefined;
+    return !isEmpty(myQueue.length) ? myQueue[0] : handleIsEmpty();
 }
 
 function deQueue(myQueue){
-    return !isEmpty(myQueue.length) ? myQueue.shift() : undefined;
+    return !isEmpty(myQueue.length) ? myQueue.shift() : handleIsEmpty();
 };
 
 
