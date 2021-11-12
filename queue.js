@@ -1,16 +1,18 @@
 let queue = [];
-let maxLength = 5;
+const maxLength = 5;
 
 
 function isFull(queueLength, fullMaxlength){
     if (queueLength === fullMaxlength){
-        return true, alert ('Queue Is full');
+        alert ('Queue Is full');
+        return true;
     }
 }
 
 function isEmpty(queueLength){
     if ( queueLength === 0){
-        return true, alert ('Queue Is Empty');
+        alert ('Queue Is Empty');
+        return true; 
     }
 }
 
